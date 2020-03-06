@@ -17,7 +17,7 @@
                 <img [src]=juego.background_image class="imagen card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">{{ juego.name }}</h5>
-                    <a href="#" class="btn btn-primary w-75 d-block m-auto">VER DETALLE</a>
+                    <a [routerLink]="['vista-detalle/' + juego.slug]" class="btn btn-primary w-75 d-block m-auto">VER DETALLE</a>
                 </div>
             </div>
         </div>

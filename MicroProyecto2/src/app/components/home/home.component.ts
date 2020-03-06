@@ -23,6 +23,8 @@ export class HomeComponent implements OnInit {
       for (let index = 0; index < 20; index++) {
         //Empujar los juegos al arreglo
         this.juegos.push(data['results'][index]);
+        console.log(this.juegos);
+
       }
       // console.log(this.juegos);
     },
