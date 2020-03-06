@@ -17,18 +17,20 @@ export class HomeComponent implements OnInit {
     this.mostrar();
   }
 
-  mostrar(){
+  mostrar() {
     this.api.getJuegos(this.api.pJuegos + this.api.pagina + this.api.nJuegos).subscribe(data => {
       for (let index = 0; index < 20; index++) {
+        //Empujar los juegos al arreglo
         this.juegos.push(data['results'][index]);
       }
-      console.log(this.juegos);
+      // console.log(this.juegos);
     },
     error => console.log(error)
     );
   }
 
   cargarMas() {
+    //Cambiar pagina de la api
     this.api.masJuegos();
     this.mostrar();
   }
