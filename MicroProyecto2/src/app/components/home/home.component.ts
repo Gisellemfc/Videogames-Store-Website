@@ -9,18 +9,28 @@ import { ApiService } from '../../services/api.service';
 export class HomeComponent implements OnInit {
 
   juegos: any[] = [];
-  nJuegos: string = '/games?page_size=24';
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService) {
+  }
 
   ngOnInit(): void {
-    this.api.getJuegos(this.nJuegos).subscribe(data => {
-      this.juegos = data['results'];
-      console.log(this.juegos);
+    this.mostrar();
+  }
 
+  mostrar(){
+    this.api.getJuegos(this.api.pJuegos + this.api.pagina + this.api.nJuegos).subscribe(data => {
+      for (let index = 0; index < 20; index++) {
+        this.juegos.push(data['results'][index]);
+      }
+      console.log(this.juegos);
     },
     error => console.log(error)
     );
+  }
+
+  cargarMas() {
+    this.api.masJuegos();
+    this.mostrar();
   }
 
 }
