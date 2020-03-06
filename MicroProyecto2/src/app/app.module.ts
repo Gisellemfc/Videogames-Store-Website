@@ -13,6 +13,7 @@ import { ProximosJuegosComponent } from './components/proximos-juegos/proximos-j
 import { HttpClientModule} from '@angular/common/http';
 import { ApiService } from './services/api.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { BuscadorPipe } from './pipes/buscador.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     AdminComponent,
     ComprarComponent,
     BotonComprarComponent,
-    ProximosJuegosComponent
+    ProximosJuegosComponent,
+    BuscadorPipe
   ],
   imports: [
     BrowserModule,

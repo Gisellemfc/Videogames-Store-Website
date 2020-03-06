@@ -6,14 +6,13 @@
             </div>
             <div class="col-12 col-sm-5 justify-content-end">
                 <div class="form-inline float-sm-right justify-content-center">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="filtroJuego" [(ngModel)]="filtroJuego">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">B</button>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="filtroJuego" name="filtroJuego" [(ngModel)]="filtroJuego">
                 </div>
             </div>
         </div>
     </div>
     <div class="row m-auto justify-content-center">
-        <div class="col-12 col-md-6 col-lg-4 mb-3" *ngFor="let juego of juegos">
+        <div class="col-12 col-md-6 col-lg-4 mb-3" *ngFor="let juego of juegos | buscador: filtroJuego">
             <div class="card h-100">
                 <img [src]=juego.background_image class="imagen card-img-top" alt="...">
                 <div class="card-body">
