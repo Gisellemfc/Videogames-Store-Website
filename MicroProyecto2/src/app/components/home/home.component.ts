@@ -9,6 +9,7 @@ import { ApiService } from '../../services/api.service';
 export class HomeComponent implements OnInit {
 
   juegos: any[] = [];
+  filtroJuego;
 
   constructor(private api: ApiService) {
   }

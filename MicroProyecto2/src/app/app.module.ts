@@ -12,6 +12,7 @@ import { BotonComprarComponent } from './components/boton-comprar/boton-comprar.
 import { ProximosJuegosComponent } from './components/proximos-juegos/proximos-juegos.component';
 import { HttpClientModule} from '@angular/common/http';
 import { ApiService } from './services/api.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { ApiService } from './services/api.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
