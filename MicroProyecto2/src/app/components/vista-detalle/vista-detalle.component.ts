@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-vista-detalle',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaDetalleComponent implements OnInit {
 
-  constructor() { }
+  juegoSlug: any;
+
+  constructor(private rutaActiva: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.juegoSlug = {
+      id: this.rutaActiva.snapshot.params.gameslug
+    };
+    console.log(this.juegoSlug);
+
   }
 
 }
