@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Caracas Gaming Spot</a>
+    <a class="navbar-brand" [routerLink]="['']">Caracas Gaming Spot</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" *ngFor="let navItem of navbar">
-                <a class="nav-link" [routerLink]="['navItem.url']" routerLinkActive="active">{{ navItem.nombre }}</a>
+                <a class="nav-link" [routerLink]="[navItem.url]" routerLinkActive="active">{{ navItem.nombre }}</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

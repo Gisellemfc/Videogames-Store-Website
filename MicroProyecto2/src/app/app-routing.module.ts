@@ -1,6 +1,8 @@
+import { ProximosJuegosComponent } from './components/proximos-juegos/proximos-juegos.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 
 const routes: Routes = [
@@ -12,6 +14,14 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'proximos-juegos',
+    component: ProximosJuegosComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ];
 
