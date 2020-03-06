@@ -9,7 +9,7 @@ import { ApiService } from '../../services/api.service';
 export class HomeComponent implements OnInit {
 
   juegos: any[] = [];
-  nJuegos: string = '/games?page_size=20';
+  nJuegos: string = '/games?page_size=24';
 
   constructor(private api: ApiService) { }
 
