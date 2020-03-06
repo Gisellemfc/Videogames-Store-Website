@@ -10,6 +10,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { ComprarComponent } from './components/comprar/comprar.component';
 import { BotonComprarComponent } from './components/boton-comprar/boton-comprar.component';
 import { ProximosJuegosComponent } from './components/proximos-juegos/proximos-juegos.component';
+import { HttpClientModule} from '@angular/common/http';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { ProximosJuegosComponent } from './components/proximos-juegos/proximos-j
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
