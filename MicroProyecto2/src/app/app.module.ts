@@ -16,6 +16,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BuscadorPipe } from './pipes/buscador.pipe';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,9 @@ import { AngularFireModule } from '@angular/fire';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [ApiService],
+  providers: [
+    ApiService,
+    AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

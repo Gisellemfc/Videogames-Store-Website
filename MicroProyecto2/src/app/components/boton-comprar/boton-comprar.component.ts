@@ -29,7 +29,7 @@ export class BotonComprarComponent implements OnInit {
       this.juegoID = this.rutaActiva.snapshot.paramMap.get('id');
     });
 
-    this.fecha = new Date(this.servicioJuego.buscarJuego(this.juegoID));
+    this.fecha = new Date(this.servicioJuego.buscarFecha(this.juegoID));
     console.log(this.fecha);
 
     this.setEstado();
