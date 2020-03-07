@@ -8,7 +8,7 @@ export class ApiService {
 
   url = 'https://rawg.io/api';
 
-
+  juegos : string = '/games/';
   pJuegos: string = '/games?page=';
   nJuegos: string = '&page_size=20';
   pagina = 1;

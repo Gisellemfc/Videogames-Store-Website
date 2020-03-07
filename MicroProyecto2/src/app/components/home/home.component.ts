@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { JuegoService } from '../../services/juego.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ export class HomeComponent implements OnInit {
   juegos: any[] = [];
   filtroJuego = '';
 
-  constructor(private api: ApiService) {
+  constructor(private api: ApiService,
+    private games: JuegoService) {
   }
 
   ngOnInit(): void {
@@ -23,8 +25,7 @@ export class HomeComponent implements OnInit {
       for (let index = 0; index < 20; index++) {
         //Empujar los juegos al arreglo
         this.juegos.push(data['results'][index]);
-        console.log(this.juegos);
-
+        this.games.setJuegos(this.juegos);
       }
       // console.log(this.juegos);
     },

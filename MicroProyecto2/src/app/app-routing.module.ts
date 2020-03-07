@@ -25,7 +25,7 @@ const routes: Routes = [
     component: AdminComponent
   },
   {
-    path: 'home/vista-detalle/:gameslug',
+    path: 'home/vista-detalle/:id',
     component: VistaDetalleComponent
   }
 ];
