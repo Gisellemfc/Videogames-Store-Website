@@ -14,6 +14,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { ApiService } from './services/api.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BuscadorPipe } from './pipes/buscador.pipe';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { BuscadorPipe } from './pipes/buscador.pipe';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
