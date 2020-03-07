@@ -2,7 +2,7 @@
 </div>
 
 <ng-template #disponible>
-    <a class="btn btn-success mt-3">COMPRAR JUEGO</a>
+    <a [routerLink]="['/comprar/' + juegoID]" class="btn btn-success mt-3">COMPRAR JUEGO</a>
 </ng-template>
 
 <ng-template #proximamente>

@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { VistaDetalleComponent } from './components/vista-detalle/vista-detalle.component';
+import { ComprarComponent } from './components/comprar/comprar.component';
 
 
 const routes: Routes = [
@@ -27,7 +28,12 @@ const routes: Routes = [
   {
     path: 'home/vista-detalle/:id',
     component: VistaDetalleComponent
+  },
+  {
+    path: 'comprar/:id',
+    component: ComprarComponent
   }
+
 ];
 
 @NgModule({
