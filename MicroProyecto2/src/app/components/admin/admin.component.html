@@ -13,14 +13,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
+                <tr *ngFor="let compra of reservas; index as i">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{ compra.data.nombre }}</td>
+                    <td>{{ compra.data.apellido }}</td>
+                    <td>{{ compra.data.cedula }}</td>
+                    <td>{{ compra.data.correo }}</td>
+                    <td>{{ compra.data.juego }}</td>
+                    <td>{{ compra.data.cantidad }}</td>
                 </tr>
             </tbody>
         </table>
