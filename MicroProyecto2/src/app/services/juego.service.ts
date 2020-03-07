@@ -13,4 +13,12 @@ export class JuegoService {
     this.juegos = juegos;
   }
 
+  buscarJuego(id){
+    for (let index = 0; index < this.juegos.length; index++) {
+      if(this.juegos[index].id == id){
+        return this.juegos[index].released;
+      }
+
+    }
+  }
 }

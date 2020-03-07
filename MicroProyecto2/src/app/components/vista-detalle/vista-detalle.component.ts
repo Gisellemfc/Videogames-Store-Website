@@ -23,7 +23,6 @@ export class VistaDetalleComponent implements OnInit {
     });
     this.api.getJuegos(this.api.juegos + this.juegoID).subscribe(juego => {
       this.juego = juego;
-      console.log(this.juego);
     });
 
   }

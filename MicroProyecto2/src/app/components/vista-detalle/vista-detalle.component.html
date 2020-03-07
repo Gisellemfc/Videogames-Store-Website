@@ -1,7 +1,12 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-5">
-            <img [src]=juego.background_image alt="" class="imagen img-fluid">
+            <div class="col-12">
+                <img [src]=juego.background_image alt="" class="imagen img-fluid">
+            </div>
+            <div class="col-12 text-center">
+                <app-boton-comprar></app-boton-comprar>
+            </div>
         </div>
         <div class="col-7">
             <h4>Titulo</h4>

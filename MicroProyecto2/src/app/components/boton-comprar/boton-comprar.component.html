@@ -1,1 +1,11 @@
-<p>boton-comprar works!</p>
+<div *ngIf="estrenada; then disponible else proximamente" class="col-auto">
+</div>
+
+<ng-template #disponible>
+    <a class="btn btn-success mt-3">COMPRAR JUEGO</a>
+</ng-template>
+
+<ng-template #proximamente>
+    <h3 class="text-center">PRÓXIMAMENTE</h3>
+    <p class="text-center">{{ fecha }}</p>
+</ng-template>
