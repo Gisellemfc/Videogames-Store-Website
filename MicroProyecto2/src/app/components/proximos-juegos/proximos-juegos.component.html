@@ -1,1 +1,18 @@
-<p>proximos-juegos works!</p>
+<div class="container-fluid ">
+    <div class="row justify-content-between">
+        <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let juego of proximas">
+            <div class="card h-100">
+                <img [src]=juego.background_image class="imagen card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ juego.name }}</h5>
+                    <a [routerLink]="['/home/vista-detalle/' + juego.id]" class="btn btn-primary w-75 d-block m-auto">VER DETALLE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-12">
+            <a class="btn btn-success w-50 d-block m-auto" (click)="cargarMas()">CARGAR MÁS</a>
+        </div>
+    </div>
+</div>

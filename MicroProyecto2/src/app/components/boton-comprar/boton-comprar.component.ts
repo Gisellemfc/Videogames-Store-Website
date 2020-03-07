@@ -30,7 +30,6 @@ export class BotonComprarComponent implements OnInit {
     });
 
     this.fecha = new Date(this.servicioJuego.buscarFecha(this.juegoID));
-    console.log(this.fecha);
 
     this.setEstado();
   }

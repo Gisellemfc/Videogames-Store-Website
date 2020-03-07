@@ -17,6 +17,7 @@ import { BuscadorPipe } from './pipes/buscador.pipe';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
   ],
   providers: [
     ApiService,
-    AngularFirestore],
+    AngularFirestore,
+    DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

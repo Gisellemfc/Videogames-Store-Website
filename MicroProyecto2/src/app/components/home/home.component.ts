@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.api.pagina = 1;
     this.mostrar();
   }
 
@@ -27,7 +28,6 @@ export class HomeComponent implements OnInit {
         this.juegos.push(data['results'][index]);
         this.games.setJuegos(this.juegos);
       }
-      // console.log(this.juegos);
     },
     error => console.log(error)
     );

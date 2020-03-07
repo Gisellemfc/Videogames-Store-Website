@@ -9,11 +9,16 @@ export class ApiService {
   url = 'https://rawg.io/api';
 
   juegos : string = '/games/';
+  proxJuegos: string = '&dates=';
   pJuegos: string = '/games?page=';
   nJuegos: string = '&page_size=20';
-  pagina = 1;
+  pagina;
+  paginaB;
 
-  constructor(protected http: HttpClient) { }
+  constructor(protected http: HttpClient) {
+    this.pagina = 1;
+    this.paginaB = 1;
+  }
 
   getJuegos(direccion) {
     return this.http.get(this.url + direccion);
@@ -23,5 +28,7 @@ export class ApiService {
     this.pagina = this.pagina + 1;
   }
 
-
+  masJuegosB(){
+    this.paginaB = this.paginaB + 1;
+  }
 }
