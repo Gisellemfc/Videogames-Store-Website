@@ -24,9 +24,9 @@
             <h4>Plataformas</h4>
             <p *ngFor="let plataforma of juego.platforms">{{ plataforma.platform.name }}</p>
             <h4>Screenshots</h4>
-            <img *ngFor="let screen of juego.stores" [src]=screen.store.image_background alt="">
+            <img *ngFor="let screen of juego.stores" [src]=screen.store.image_background alt="" class="img-fluid">
             <h4>Trailer</h4>
-            <video [src]=juego.clip.clip controls></video>
+            <video [src]=juego.clip.clip controls width="300px"></video>
         </div>
     </div>
 </div>
