@@ -1,4 +1,9 @@
 .imagen {
-    height: 300px;
-    width: auto;
+    max-height: 300px;
+    max-width: 100%;
+}
+
+.video {
+    width: 100%;
+    max-width: 600px;
 }

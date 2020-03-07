@@ -1,6 +1,6 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-5">
+    <div class="row align-items-center">
+        <div class="col-12 col-md-5">
             <div class="col-12">
                 <img [src]=juego.background_image alt="" class="imagen img-fluid">
             </div>
@@ -8,25 +8,73 @@
                 <app-boton-comprar></app-boton-comprar>
             </div>
         </div>
-        <div class="col-7">
-            <h4>Titulo</h4>
-            <p>{{juego.name}}</p>
-            <h4>Descripción</h4>
+        <div class="col-12 col-md-7">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">{{juego.name}}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-center">
+                    <h4>Rating del juego</h4>
+                    <p>{{ juego.rating }} ESTRELLAS</p>
+                </div>
+                <div class="col-6 text-center">
+                    <h4>Fecha de Lanzamiento:</h4>
+                    <p>{{ juego.released }}</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-6 text-center">
+                    <h4>Géneros</h4>
+                    <p *ngFor="let genero of juego.genres">+ {{ genero.name }}</p>
+                </div>
+                <div class="col-6 text-center">
+                    <h4>Desarrollador y Productor</h4>
+                    <p *ngFor="let desarrollador of juego.developers">{{ desarrollador.name }}</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <h4>Plataformas</h4>
+                    <p *ngFor="let plataforma of juego.platforms" class="d-inline">- {{ plataforma.platform.name }} -</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-center mt-3">
+        <div class="col-12 text-justify">
+            <h3>Descripción</h3>
             <div [innerHTML]=juego.description></div>
-            <h4>Fecha de Lanzamiento</h4>
-            <p>{{ juego.released }}</p>
-            <h4>Géneros</h4>
-            <p *ngFor="let genero of juego.genres">+ {{ genero.name }}</p>
-            <h4>Desarrolladores y publicadores</h4>
-            <p *ngFor="let desarrollador of juego.developers">{{ desarrollador.name }}</p>
-            <h4>Rating del juego</h4>
-            <p>{{ juego.rating }}</p>
-            <h4>Plataformas</h4>
-            <p *ngFor="let plataforma of juego.platforms">{{ plataforma.platform.name }}</p>
-            <h4>Screenshots</h4>
-            <img *ngFor="let screen of juego.stores" [src]=screen.store.image_background alt="" class="img-fluid">
-            <h4>Trailer</h4>
-            <video [src]=juego.clip.clip controls width="300px"></video>
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Screenshots</h3>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-5 m-1" *ngFor="let screen of juego.stores">
+                    <img [src]=screen.store.image_background alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Trailer</h3>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <video [src]=juego.clip.clip controls class="video"></video>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
