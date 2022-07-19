@@ -1,4 +1,7 @@
-# MicroProyecto2
+
+# Videogames Store Website
+
+Project elaborated in the subject of Information Systems of the Universidad Metropolitana in Caracas, Venezuela. This project simulates a video game store website made with Angular, Bootstrap and Firebase.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
